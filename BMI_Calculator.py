@@ -1,12 +1,17 @@
 
 def take_input():
-    print (" ")
-    name = input("Your name:   ")
-    print (" ")
-    height = float(input("Your Height in meters, eg 1.5 = ")) 
-    print (" ")
-    weight = float(input("Your Weight in Kilograms, eg 70 = "))
-    return name, height, weight
+    try:
+
+        print (" ")
+        name = input("Your name:   ")
+        print (" ")
+        height = float(input("Your Height in meters, eg 1.5 = ")) 
+        print (" ")
+        weight = float(input("Your Weight in Kilograms, eg 70 = "))
+        return name, height, weight
+    except ValueError:
+        print('INCORRECT ENTRY')
+        
 
 def height_unit_check(height):
     if height >= 2.2:
